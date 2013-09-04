@@ -1,0 +1,218 @@
+/*
+	Estilos basados en LESS por TSU Javier Colmenárez
+	2012
+*/
+
+// Reseteo del CSS de los Browsers
+@import "reset.less";
+
+// Variables bases y Funciones Mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Estructura del Layout
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+// Base CSS
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+@import "tables.less";
+
+// Components: common
+//@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+// Components: Buttons & Alerts
+@import "buttons.less";
+@import "button-groups.less";
+@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+
+// Components: Popovers
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+
+// Components: Misc
+@import "thumbnails.less";
+@import "labels.less";
+@import "progress-bars.less";
+@import "accordion.less";
+@import "carousel.less";
+@import "hero-unit.less";
+
+// Utility classes
+@import "utilities.less"; // Has to be last to override when necessary
+
+
+.fila_contenedora(@altura){
+	min-height:@altura;
+	width:100%;
+	margin:0;
+}
+
+.container{position:relative;}
+
+body{
+
+	section{	.fila_contenedora(650px);
+				#gradient.vertical(#428ec1,#67b3e2);
+				padding-top:50px;
+		
+		.row{	position:relative;
+			
+			&:first-child > .span6:first-child{	border-bottom:1px solid #4E96CA; padding-bottom:50px;	}
+		}
+		
+		#cartelera_box{	.size(396px,460px);
+						position:relative;
+			
+			a.pasos_circulos{	padding:22px 18px 0 0;
+								.size(38px,42px);
+								.border-radius(30px);
+								color:#fff;
+								font-size:2em;
+								text-align:right;
+								display:inline-block;
+								position:absolute;
+								right:0;
+								top:17%;
+								
+				&:hover{text-decoration:none;}
+				&#paso1{background-color:#abe181;}
+				&#paso2{background-color:#b4e1f6;margin-top:50px;}
+				&#paso3{background-color:#377bb8;margin-top:100px;}
+			}
+			
+			#demo_screen{	position:absolute;
+							.size(395px,423px);
+							background:transparent url("../img/video_frame.png") no-repeat;
+							top:0;
+							right:40px;
+				
+				#contenido_screen_box{	.size(221px,390px);
+										margin:16px auto;
+										position:relative;
+										#gradient.vertical(#fff,#acacac);
+										text-align:center;
+										
+					img{	display:inline-block;
+							margin-top:70px;
+					}
+					
+					#play_icon{	.square(65px);
+								background:transparent url("../img/play_icon.png") no-repeat;
+								.opacity(90);
+								margin:-60px auto 0 auto;
+					}
+				}
+				
+				#capa_reflejo{	position:absolute;
+								.size(293px,100%);
+								background:transparent url("../img/video_frame_reflection.png") no-repeat right top;
+								top:0;
+								right:0;
+								display:block;
+				}
+			}
+			
+		}
+		
+		#cartelera_box + .btn-large{
+			#gradient.vertical(#377bb8,#377bb8);
+			color:#fff;
+			text-transform:uppercase;
+			font-size:1.2em;
+			width:127px;
+			.border-radius(15px);
+			margin:-10px 0 0 130px;
+			position:relative;
+			border:none;
+			box-shadow:none;
+			&:hover{background-position:left top;}
+			text-shadow:none;
+		}
+		
+		.btn_info{color:#336796;font-size:.8em;margin:5px 0 0 133px;}
+		
+		#cartelera_info{	color:#336796;
+			h1{	font-size:4em;
+				line-height:1em;
+				text-align:center;
+				color:#fff;
+				span{font-weight:normal;}
+				padding:15px 0 6px 0;
+			}
+			a{	color:#90caea;
+			}
+			p{	padding:0 0 0 25px;
+				font-size:1.2em;
+				line-height:1.3em;
+				margin-bottom:0;
+			}
+		
+			.tacometro{	.square(296px);
+						background:transparent url("../img/fondo_tacometro.png") no-repeat;
+						position:relative;
+						margin:0 auto;
+				
+				.aguja{
+					.size(181px,69px);
+					background:transparent url("../img/aguja_tacometro.png") no-repeat;
+					position:absolute;
+					bottom:80px;
+					left:50%;
+				}
+				
+				.tacometro_tags{	position:absolute;
+									bottom:40px;
+									margin:0 0 0 -25px;
+									width:100px;
+									font-size:.9em;
+									.border-radius(15px);
+									border:none;
+									text-shadow:none;
+									#gradient.vertical(#fff,#fff);
+									color:#336796;
+									
+					&:hover{backgorund-position:left top;}
+				}
+				.tacometro_tags + .tacometro_tags{right:0;margin-right:-25px;}
+			}
+			
+		}
+		
+		#info_pasos{
+			background:transparent url("../img/flecha_pasos.png") no-repeat center top;
+			.size(42px,170px);
+			position:absolute;
+			top:50%;
+			left:50%;
+			color:#fff;
+			padding-top:78px;
+			text-align:center;
+			font-size:1.2em;
+			margin:-30px 0 0 -90px;
+		}
+		
+		#disclosure{	color:#336796;
+						font-size:.8em;
+		}
+		#aliados_seguridad{	margin:25px 0 0 60px;
+		}
+		
+	}
+	
+}

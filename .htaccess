@@ -1,0 +1,23 @@
+#ErrorDocument 404 http://localhost/stc-ivoted/canis/view/not-found
+ErrorDocument 404 http://ivoted.com/view/not-found
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^sitemap.xml$ crud.php?public_action=sitemap [L]
+RewriteRule ^view/login/xd_receiver.htm$ xd_receiver.htm [L]
+RewriteRule ^view/login/xd_receiver.htm(.*) xd_receiver.htm$1 [L]
+RewriteRule ^view/login/login controller.php?view=login [L]
+RewriteRule ^poll/([^/.]+)/([^/.]+)/?$ controller.php?view=poll-results&idPoll=$1 [L]
+RewriteRule ^poll/([0-9]+)$ controller.php?view=poll-results&idPoll=$1 [L]
+RewriteRule ^view/edit-poll/([0-9]+)$ controller.php?view=edit-poll&idPoll=$1 [L]
+RewriteRule ^view/([^/.]+)/?$ controller.php?view=$1 [L]
+RewriteRule ^panel/([^/.]+)/?$ controller.php?panel=$1 [L]
+RewriteRule ^view/([^/.]+)/([^/.]+)/([^/.]+)/?$ controller.php?view=$1&$2=$3 [L]
+RewriteRule ^vote/poll/([^/.]+)/?$ controller.php?view=vote&idPoll=$1 [L]
+RewriteRule ^vote/poll/([^/.]+)/([^/.]+)/?$ controller.php?view=vote&idPoll=$1 [L]
+RewriteRule ^view/confirm-pass/([^/.]+)/([^/.]+)/([0-9]+)/([0-9]+)$ controller.php?view=confirm-pass&omail=$1&email=$2&validation=$3&user=$4 [L]
+# View a poll with mobile view
+RewriteRule ^mobile/poll/([0-9]+)$ controller.php?view=mobile&idPoll=$1 [L]
+RewriteRule ^mobile/?$ controller.php?view=mobile [L]

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<roles>
+	<role name='invalid' >
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>validate</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>polls</view>
+		<view read='true' edit='true'>mobile</view>
+	</role>
+	<role name='admin' >
+		<view read='true' edit='true'>private</view>
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>validate</view>
+	</role>
+</roles>
