@@ -15,14 +15,14 @@ class PollDelegate
 
    public function getPoll($validator)
 	{
-      //$id = $validator->getVar("idPoll");
-	   //$id = 206;
-		$id = 1470;
-      if(empty($id))//Means that the user is creating a new poll
-      	return null;
+		//$id = $validator->getVar("idPoll");
+		//$id = 206;
+		$id = 1471;
+		if(empty($id))//Means that the user is creating a new poll
+      		return null;
 
-      $record = Doctrine::getTable("Poll")->find($id);
-	  return $record;
+		$record = Doctrine::getTable("Poll")->find($id);
+		return $record;
 
 	} //End getPoll
 
@@ -58,12 +58,12 @@ class PollDelegate
    {
    	  //$id = $validator->getVar("idPoll");
 	  //$id = 206;
-   	$id = 1470;
-      if(empty($id))//Means that the user is creating a new poll
-      	return null;
+   		$id = 1471;
+      	if(empty($id))//Means that the user is creating a new poll
+      		return null;
 
- 	 $records = Doctrine::getTable("PollOption")->findBy("id_poll",$id);
-   	 return $records;
+ 	 	$records = Doctrine::getTable("PollOption")->findBy("id_poll",$id);
+   	 	return $records;
    }//END getPollOptions
 
    public function getPublicPolls($validator)

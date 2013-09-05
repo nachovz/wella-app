@@ -66,6 +66,15 @@ abstract class BasePollOption extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
+        $this->hasColumn('picture_count', 'integer', 8, array(
+             'type' => 'integer',
+             'length' => 8,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+            ));
     }
 
     public function setUp()

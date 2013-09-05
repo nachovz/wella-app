@@ -35,9 +35,9 @@ $GLOBALS["canisSessionName"] = "ivoted";
 //$GLOBALS["dbUser"]     = "C291728_wella";
 //$GLOBALS["dbPassword"] = "W3ll4";
 $GLOBALS["dbServer"]   = "localhost";
-$GLOBALS["dbName"]     = "C291728_wella-app";
-$GLOBALS["dbUser"]     = "martin";
-$GLOBALS["dbPassword"] = "1234";
+$GLOBALS["dbName"]     = "wella-concurso";
+$GLOBALS["dbUser"]     = "root";
+$GLOBALS["dbPassword"] = "";
 
 //$GLOBALS["dbServer"]   = "localhost";
 //$GLOBALS["dbName"]     = "ivoted";
@@ -81,5 +81,8 @@ $GLOBALS["frendlyURL"] = true;
 //$GLOBALS["baseURL"] = "http://dev.geekies.co/wella-app/";
 $GLOBALS["baseURL"] = "http://localhost/wella-app/";
 $GLOBALS["secureBaseURL"] =  "http://localhost/wella-app/";
+
+/*--------Wella Web URL----------*/
+$GLOBALS["wellaWebURL"] = "http://localhost/wella-web/";
 
 ?>
