@@ -54,7 +54,7 @@ $naitik = $facebook->api('/naitik');
 		<div class="row">
 			<div class="span12" id="caja_info">
 				<h1>GRACIAS POR PARTICIPAR</h1>
-				<a class="cerrar" href="<?php echo $GLOBALS["secureWellaWebURL"];?>">CERRAR (X)</a>
+				<a class="cerrar" href="<?php echo $GLOBALS["secureWellaWebURL"];?>">Regresar</a>
 			</div>
 		</div>
 
