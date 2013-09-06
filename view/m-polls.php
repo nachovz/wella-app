@@ -80,20 +80,16 @@ $naitik = $facebook->api('/naitik');
 </section>
 
 <div class="carousel" id="popupZero">
-    <div id="caja_1" class="caja-pics">
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic_rev.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic_rev.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic.jpg" width="576" height="448" /></div>
+	<?php foreach( $vars['options'] as $index => $option ): $i = $index + 1;?>
+	<div id="<?php echo "caja_{$i}";?>" class="caja-pics">
+		<?php $pic_name  = strtolower( str_replace( ' ', '-', $vars['poll']->question ) ) . '/' . utf8_encode( strtolower( str_replace( ' ', '-', $option->answer ) ) );?>   
+   		<?php for( $i = 1; $i <= $option->picture_count; $i++ ): $j = ( $i > 0 && $i < 10 ) ? '0' . $i : $i; ?>
+        <div class="item">
+        	<img alt="Imagen del estilista" src="<?php echo $GLOBALS["baseURL"] . 'images/' . $pic_name . '-' . $j . '.png'; ?>" width="278" height="295" />
+        </div>
+        <?php endfor;?>
     </div>
-    <div id="caja_2" class="caja-pics">
-       <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic2.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic_rev2.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic2.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic_rev2.jpg" width="576" height="448" /></div>
-        <div class="item"><img src="<?php echo $GLOBALS["baseURL"]; ?>images/carousel_demo_pic2.jpg" width="576" height="448" /></div>
-    </div>
+	<?php endforeach;?>
     <a class="carousel-control left" data-slide="prev" id="btn_prevpic_popup" href="#popupZero" title="Mostrar imagen anterior"></a>
     <a class="carousel-control right" data-slide="next" id="btn_proxpic_popup" href="#popupZero" title="Mostrar imagen siguiente"></a>
     <a id="btn_cerrar_popup" href="#" title="Cerrar galer&iacute;a"></a>
