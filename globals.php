@@ -84,5 +84,6 @@ $GLOBALS["secureBaseURL"] =  "http://localhost/wella-app/";
 
 /*--------Wella Web URL----------*/
 $GLOBALS["wellaWebURL"] = "http://localhost/wella-web/";
+$GLOBALS["secureWellaWebURL"] = "https://localhost/wella-web/";
 
 ?>
