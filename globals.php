@@ -34,10 +34,10 @@ $GLOBALS["canisSessionName"] = "ivoted";
 //$GLOBALS["dbName"]     = "C291728_wella-app";
 //$GLOBALS["dbUser"]     = "C291728_wella";
 //$GLOBALS["dbPassword"] = "W3ll4";
-$GLOBALS["dbServer"]   = "localhost";
-$GLOBALS["dbName"]     = "wella-concurso";
-$GLOBALS["dbUser"]     = "root";
-$GLOBALS["dbPassword"] = "";
+$GLOBALS["dbServer"]   = "mysql1110.ixwebhosting.com";
+$GLOBALS["dbName"]     = "C334725_wella-concurso";
+$GLOBALS["dbUser"]     = "C334725_wella";
+$GLOBALS["dbPassword"] = "Cueva2013";
 
 //$GLOBALS["dbServer"]   = "localhost";
 //$GLOBALS["dbName"]     = "ivoted";
@@ -79,11 +79,10 @@ $GLOBALS["frendlyURL"] = true;
 
 
 //$GLOBALS["baseURL"] = "http://dev.geekies.co/wella-app/";
-$GLOBALS["baseURL"] = "http://localhost/wella-app/";
-$GLOBALS["secureBaseURL"] =  "http://localhost/wella-app/";
+$GLOBALS["baseURL"] = "http://apps.cuevasocial.com/concurso/app/";
+$GLOBALS["secureBaseURL"] =  "http://apps.cuevasocial.com/concurso/app/";
 
 /*--------Wella Web URL----------*/
-$GLOBALS["wellaWebURL"] = "http://localhost/wella-web/";
-$GLOBALS["secureWellaWebURL"] = "https://localhost/wella-web/";
-
+$GLOBALS["wellaWebURL"] = "http://apps.cuevasocial.com/concurso/web/";
+$GLOBALS["secureWellaWebURL"] = "https://apps.cuevasocial.com/concurso/web/";
 ?>

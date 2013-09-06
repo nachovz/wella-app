@@ -1227,7 +1227,7 @@ $keyword = "P".$num.strtoupper($keyword);
 		$entity2->datetime  = $today = date("Y-m-d H:m:s");  
 		
 		$entity2->save();
-		//setcookie("iVotedPoll".$poll,1,time()+86400);
+		setcookie("iVotedPoll".$poll,1,time()+86400);
 		
         header("Location: ".$GLOBALS["baseURL"]."mobile/poll/".$poll);
 

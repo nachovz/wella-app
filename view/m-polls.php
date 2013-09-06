@@ -5,12 +5,11 @@
 * @autor: Psycho
 */
 
-/*
 require_once 'phputils/facebook/src/facebook.php';
 
 $facebook = new Facebook(array(
-  'appId'  => '344617158898614',
-  'secret' => '6dc8ac871858b34798bc2488200e503d',
+  'appId'  => '517858018285022',
+  'secret' => 'f732e35399e8d1eda5759b76df960bfe',
 ));
 
 // Get User ID
@@ -41,17 +40,21 @@ if ($user) {
 
 // This call will always work since we are fetching public data.
 $naitik = $facebook->api('/naitik');
-*/
+
 ?>
 <section>
 	<div class="container">
+		<div style="margin-top:10px; color: #969699;">
+			<h1 style="margin-left: 10px; color: #6F6F6F;">Reto 2</h1>
+		</div>
+		
 
 <?php if(isset($_COOKIE['iVotedPoll'.$vars['poll']->id])) { ?>
 		
 		<div class="row">
 			<div class="span12" id="caja_info">
 				<h1>GRACIAS POR PARTICIPAR</h1>
-				<a href="#">CERRAR (X)</a>
+				<a class="cerrar" href="<?php echo $GLOBALS["secureWellaWebURL"];?>">CERRAR (X)</a>
 			</div>
 		</div>
 
@@ -61,7 +64,7 @@ $naitik = $facebook->api('/naitik');
 
 		<div class="row">
 	        <div class="span12">
-	            <h1><?php echo utf8_encode( $option->answer ); ?><span><?php echo utf8_encode( $option->answer ); ?></span></h1>
+	            <h1><span><?php echo utf8_encode( $option->answer ); ?></span></h1>
 	            <ul id="est_<?php echo $index + 1; ?>" class="pics_estilista">	            	
 	            	<?php $pic_name  = strtolower( str_replace( ' ', '-', $vars['poll']->question ) ) . '/' . utf8_encode( strtolower( str_replace( ' ', '-', $option->answer ) ) );?>
 	                
@@ -73,7 +76,7 @@ $naitik = $facebook->api('/naitik');
 	        </div>
 	    </div>
 
-	<?php } ?>
+	<?php  } ?>
 
 <?php } ?>
 	</div>
